@@ -1,18 +1,13 @@
-databases:
-  - name: churn-db
-    ipAllowList: []
-
 services:
   - name: churn-api
+    runtime: python311
     region: oregon
     plan: free
     repo: https://github.com/sandeepganthi25-collab/Autonomous-Customer-Churn-Prevention-System
     branch: main
     rootDir: backend
-    buildCommand: pip install -r requirements.txt
+    buildCommand: pip install --no-cache-dir -r requirements.txt
     startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
-    pythonVersion: "3.11"
     envVars:
       - key: OPENAI_API_KEY
-        value: ""
-        fromFlag: false
+        sync: false
