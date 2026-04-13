@@ -3,15 +3,18 @@ import json
 import random
 from typing import Dict, Any, Optional
 
+_has_openai = False
+_openai_client = None
+
 try:
     from openai import OpenAI
 
-    _has_openai = bool(os.getenv("OPENAI_API_KEY"))
-    if _has_openai:
-        _openai_client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
-except:
-    _has_openai = False
-    _openai_client = None
+    api_key = os.getenv("OPENAI_API_KEY")
+    if api_key:
+        _has_openai = True
+        _openai_client = OpenAI(api_key=api_key)
+except Exception:
+    pass
 
 
 class RiskAgent:
