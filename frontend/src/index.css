@@ -1,0 +1,570 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Inter', system-ui, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Dark Mode (Default) */
+:root, .dark-mode {
+  --bg-primary: #0a0a0f;
+  --bg-secondary: #12121a;
+  --bg-card: rgba(26, 26, 37, 0.6);
+  --text-primary: rgba(255, 255, 255, 0.87);
+  --text-secondary: #9ca3af;
+  --border-color: rgba(255, 255, 255, 0.1);
+  --accent-color: #00ff88;
+  --accent-secondary: #00d4ff;
+  background-color: #0a0a0f;
+  color: rgba(255, 255, 255, 0.87);
+}
+
+/* Light Mode */
+.light-mode {
+  --bg-primary: #f8fafc;
+  --bg-secondary: #e2e8f0;
+  --bg-card: rgba(255, 255, 255, 0.9);
+  --text-primary: #1e293b;
+  --text-secondary: #64748b;
+  --border-color: rgba(0, 0, 0, 0.15);
+  --accent-color: #059669;
+  --accent-secondary: #0284c7;
+  background-color: #f8fafc;
+  color: #1e293b;
+}
+
+/* Light Mode Text Overrides */
+.light-mode {
+  color: #1e293b;
+}
+
+.light-mode h1, .light-mode h2, .light-mode h3, .light-mode h4, .light-mode h5, .light-mode h6 {
+  color: #1e293b;
+}
+
+.light-mode p {
+  color: #475569;
+}
+
+.light-mode span {
+  color: #1e293b;
+}
+
+.light-mode label {
+  color: #475569;
+}
+
+.light-mode .text-white {
+  color: #1e293b !important;
+}
+
+.light-mode .text-gray-100 {
+  color: #475569 !important;
+}
+
+.light-mode .text-gray-200 {
+  color: #64748b !important;
+}
+
+.light-mode .text-gray-300 {
+  color: #64748b !important;
+}
+
+.light-mode .text-gray-400 {
+  color: #64748b !important;
+}
+
+.light-mode .text-gray-500 {
+  color: #64748b !important;
+}
+
+.light-mode .text-gray-600 {
+  color: #64748b !important;
+}
+
+.light-mode .glass-card {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  color: #1e293b !important;
+}
+
+.light-mode .glass-card p,
+.light-mode .glass-card span,
+.light-mode .glass-card h1,
+.light-mode .glass-card h2,
+.light-mode .glass-card h3,
+.light-mode .glass-card h4 {
+  color: #1e293b !important;
+}
+
+.light-mode .bg-dark-600 {
+  background-color: #e2e8f0 !important;
+}
+
+.light-mode .bg-dark-700 {
+  background-color: #f1f5f9 !important;
+}
+
+.light-mode .bg-dark-800 {
+  background-color: #f8fafc !important;
+}
+
+.light-mode .bg-dark-900 {
+  background-color: #ffffff !important;
+}
+
+.light-mode .bg-black\/70 {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.light-mode input, .light-mode select, .light-mode textarea {
+  background-color: #ffffff !important;
+  border-color: rgba(0, 0, 0, 0.15) !important;
+  color: #1e293b !important;
+}
+
+.light-mode input::placeholder {
+  color: #94a3b8 !important;
+}
+
+.light-mode .border-white\/10 {
+  border-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+.light-mode .border-white\/5 {
+  border-color: rgba(0, 0, 0, 0.05) !important;
+}
+
+.light-mode .border-white\/20 {
+  border-color: rgba(0, 0, 0, 0.15) !important;
+}
+
+.light-mode .border-white\/30 {
+  border-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+.light-mode .hover\:bg-white\/5:hover {
+  background-color: rgba(0, 0, 0, 0.05) !important;
+}
+
+.light-mode .bg-white\/5 {
+  background-color: rgba(0, 0, 0, 0.03) !important;
+}
+
+.light-mode .bg-white\/10 {
+  background-color: rgba(0, 0, 0, 0.05) !important;
+}
+
+.light-mode .bg-neon-green\/20 {
+  background-color: rgba(5, 150, 105, 0.15) !important;
+}
+
+.light-mode .bg-neon-red\/20 {
+  background-color: rgba(220, 38, 38, 0.15) !important;
+}
+
+.light-mode .bg-neon-red\/10 {
+  background-color: rgba(220, 38, 38, 0.1) !important;
+}
+
+.light-mode .text-neon-green {
+  color: #059669 !important;
+}
+
+.light-mode .text-neon-red {
+  color: #dc2626 !important;
+}
+
+.light-mode .text-neon-blue {
+  color: #0284c7 !important;
+}
+
+.light-mode .text-neon-yellow {
+  color: #ca8a04 !important;
+}
+
+.light-mode .text-neon-purple {
+  color: #7c3aed !important;
+}
+
+/* Header/Nav Light Mode */
+.light-mode header {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  border-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+.light-mode header h1,
+.light-mode header h2,
+.light-mode header h3,
+.light-mode header span,
+.light-mode header p {
+  color: #1e293b !important;
+}
+
+.light-mode nav button {
+  color: #475569 !important;
+}
+
+.light-mode nav button:hover {
+  color: #1e293b !important;
+}
+
+.light-mode nav button.active {
+  color: #059669 !important;
+}
+
+/* Tab/Button Light Mode */
+.light-mode button {
+  color: #475569;
+}
+
+.light-mode button:hover {
+  color: #1e293b;
+}
+
+.light-mode .btn-primary {
+  background-color: #059669 !important;
+  color: #ffffff !important;
+}
+
+/* Modal Light Mode */
+.light-mode .modal-content,
+.light-mode [class*="modal"] {
+  background-color: #ffffff !important;
+  color: #1e293b !important;
+}
+
+.light-mode .bg-black\/70 {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+/* Chart colors for light mode */
+.light-mode .recharts-text {
+  fill: #64748b !important;
+}
+
+.light-mode .recharts-cartesian-grid-horizontal line,
+.light-mode .recharts-cartesian-grid-vertical line {
+  stroke: #e2e8f0 !important;
+}
+
+.light-mode .recharts-tooltip-wrapper {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+}
+
+.light-mode .recharts-default-tooltip {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+}
+
+/* Login Page Light Mode */
+.light-mode input[type="text"],
+.light-mode input[type="email"],
+.light-mode input[type="password"],
+.light-mode input[type="number"] {
+  background-color: #ffffff !important;
+  border-color: rgba(0, 0, 0, 0.15) !important;
+  color: #1e293b !important;
+}
+
+.light-mode input::placeholder {
+  color: #94a3b8 !important;
+}
+
+.light-mode label {
+  color: #475569 !important;
+}
+
+.light-mode .text-gray-600 {
+  color: #64748b !important;
+}
+
+.light-mode .border-white\/10 {
+  border-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+.light-mode .border-white\/20 {
+  border-color: rgba(0, 0, 0, 0.15) !important;
+}
+
+.light-mode .border-white\/30 {
+  border-color: rgba(0, 0, 0, 0.2) !important;
+}
+
+.light-mode .border-t\/10 {
+  border-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+.light-mode .border-b\/10 {
+  border-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+/* All specific text color classes in light mode */
+.light-mode .text-gray-300 {
+  color: #475569 !important;
+}
+
+.light-mode .text-gray-200 {
+  color: #64748b !important;
+}
+
+.light-mode .text-gray-100 {
+  color: #64748b !important;
+}
+
+/* Light mode for login card */
+.light-mode .min-h-screen {
+  background-color: #f8fafc !important;
+}
+
+.light-mode .glass-card {
+  background-color: #ffffff !important;
+  border-color: rgba(0, 0, 0, 0.1) !important;
+  color: #1e293b !important;
+}
+
+.light-mode .glass-card h1,
+.light-mode .glass-card h2,
+.light-mode .glass-card h3,
+.light-mode .glass-card p,
+.light-mode .glass-card span,
+.light-mode .glass-card label,
+.light-mode .glass-card input,
+.light-mode .glass-card button {
+  color: inherit;
+}
+
+/* Settings panel light mode */
+.light-mode .fixed\/inset-0 {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.light-mode .ml-auto {
+  background-color: #ffffff !important;
+}
+
+/* All text in light mode cards */
+.light-mode [class*="glass-card"] * {
+  color: #1e293b !important;
+}
+
+/* Ensure headings are visible */
+.light-mode h1,
+.light-mode h2,
+.light-mode h3,
+.light-mode h4,
+.light-mode h5,
+.light-mode h6 {
+  color: #1e293b !important;
+}
+
+/* Ensure specific dark text classes work */
+.light-mode .text-slate-600,
+.light-mode .text-slate-700,
+.light-mode .text-slate-800,
+.light-mode .text-slate-900 {
+  color: inherit !important;
+}
+
+/* Re-enable neon colors on hover/active */
+.light-mode .text-neon-green:hover {
+  color: #059669 !important;
+}
+
+.light-mode .text-neon-blue:hover {
+  color: #0284c7 !important;
+}
+
+.light-mode .text-neon-purple:hover {
+  color: #7c3aed !important;
+}
+
+.light-mode .text-neon-red:hover {
+  color: #dc2626 !important;
+}
+
+/* Force all body text to be visible in light mode */
+.light-mode * {
+  color: #1e293b;
+}
+
+/* Keep specific colors as intended */
+.light-mode .text-neon-green,
+.light-mode .text-neon-red,
+.light-mode .text-neon-blue,
+.light-mode .text-neon-yellow,
+.light-mode .text-neon-purple {
+  color: #059669 !important;
+}
+
+/* Override any dark backgrounds */
+.light-mode .bg-black {
+  background-color: #1e293b !important;
+}
+
+.light-mode .bg-slate-900 {
+  background-color: #f1f5f9 !important;
+}
+
+.light-mode .bg-slate-800 {
+  background-color: #e2e8f0 !important;
+}
+
+/* Ensure chart area colors work */
+.light-mode .recharts-area-curve {
+  fill: #059669 !important;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 50%, var(--bg-primary) 100%);
+}
+
+.light-mode body {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 50%, #f8fafc 100%);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.glass-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+}
+
+.light-mode .glass-card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.glass-card-hover:hover {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 30px rgba(0, 255, 136, 0.1);
+}
+
+.light-mode .glass-card-hover:hover {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 30px rgba(5, 150, 105, 0.2);
+}
+
+.neon-border {
+  border: 1px solid rgba(0, 255, 136, 0.3);
+  box-shadow: inset 0 0 20px rgba(0, 255, 136, 0.05);
+}
+
+.light-mode .neon-border {
+  border: 1px solid rgba(5, 150, 105, 0.3);
+  box-shadow: inset 0 0 20px rgba(5, 150, 105, 0.05);
+}
+
+.neon-text {
+  text-shadow: 0 0 10px currentColor;
+}
+
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.ticker-scroll {
+  animation: ticker 30s linear infinite;
+}
+
+.ticker-scroll:hover {
+  animation-play-state: paused;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-card);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent-color);
+  opacity: 0.5;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-color);
+  opacity: 1;
+}
+
+input, select, textarea {
+  font-family: inherit;
+}
+
+/* Animation classes */
+.animations-enabled * {
+  transition: all 0.3s ease;
+}
+
+.animations-disabled * {
+  transition: none !important;
+  animation: none !important;
+}
+
+@layer utilities {
+  .bg-grid-pattern {
+    background-image: 
+      linear-gradient(rgba(0, 255, 136, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 255, 136, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+
+  .light-mode .bg-grid-pattern {
+    background-image: 
+      linear-gradient(rgba(5, 150, 105, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(5, 150, 105, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: var(--bg-card);
+    border-radius: 3px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+  }
+
+  .light-mode .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+  .light-mode .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.3);
+  }
+}

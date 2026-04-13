@@ -1,0 +1,11 @@
+user_id,name,email,login_frequency,total_purchases,engagement_score,support_tickets,days_since_purchase
+U001,Sarah Connor,sarah.connor@skynet.io,45,0,15,8,120
+U002,John Matrix,john.matrix@acme.com,5,25,92,0,3
+U003,Bob特工,bob@test.com,22,3,38,6,45
+U004,Alice Chen,alice.chen@startup.io,60,0,8,10,180
+U005,James Bond,james@mi6.gov,10,15,78,1,12
+U006,Lara Croft,lara@tomb.dev,3,30,95,0,1
+U007,Mike Ross,mike.ross@legal.com,35,2,25,7,90
+U008,Tony Stark,tony@stark.ind,8,22,85,2,7
+U009,Bruce Wayne,bruce@wayne.ent,55,1,12,9,150
+U010, Diana Prince,diana@themyscira.org,2,40,98,0,0
