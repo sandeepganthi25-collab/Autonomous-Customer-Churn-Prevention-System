@@ -1,13 +1,23 @@
-from openai import OpenAI
 import os
 import json
 import random
 from typing import Dict, Any, Optional
 
+try:
+    from openai import OpenAI
+
+    _has_openai = bool(os.getenv("OPENAI_API_KEY"))
+    if _has_openai:
+        _openai_client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+except:
+    _has_openai = False
+    _openai_client = None
+
 
 class RiskAgent:
     def __init__(self):
-        self.client = OpenAI(api_key=os.getenv("OPENAI_API_KEY", ""))
+        self.client = _openai_client
+        self.has_openai = _has_openai
         self.model_name = "gpt-4"
 
     async def predict(self, user: Dict[str, Any]) -> Dict[str, Any]:
