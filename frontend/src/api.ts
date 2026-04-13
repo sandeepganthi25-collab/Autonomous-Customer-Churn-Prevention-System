@@ -1,4 +1,6 @@
-const API_BASE = '/api';
+const API_BASE = import.meta.env.VITE_API_URL 
+  ? `${import.meta.env.VITE_API_URL}/api` 
+  : '/api';
 
 export async function fetchUsers(riskLevel?: string, limit = 50): Promise<any[]> {
   const params = new URLSearchParams();
